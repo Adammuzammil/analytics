@@ -176,8 +176,11 @@ const Analytics = () => {
                 {/* Top Pages */}
                 <div className="flex flex-col bg-black z-40 h-full w-full">
                   <h1>Top Pages</h1>
-                  {groupedPageViews.map((view) => (
-                    <div className="text-white w-full flex items-center justify-between px-6 border-b border-white/5">
+                  {groupedPageViews.map((view, i) => (
+                    <div
+                      className="text-white w-full flex items-center justify-between px-6 border-b border-white/5"
+                      key={i}
+                    >
                       <p>{view.page}</p>
                       <p>{abbreviateNumber(view.visits)}</p>
                     </div>
